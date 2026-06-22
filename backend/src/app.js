@@ -21,7 +21,7 @@ app.use(express.urlencoded({ limit: "40kb", extended: true }));
 app.use("/api/v1/users", userRoutes);
 
 const start = async () => {
-    const connectionDb = await mongoose.connect("mongodb+srv://satyamksingh1963_db_user:Satyam1963@cluster0.jaj09vo.mongodb.net/?appName=Cluster0");
+    const connectionDb = await mongoose.connect(" paste the mongodb atlas url ");
     console.log(`MONGO Connected DB Host: ${connectionDb.connection.host}`)
     server.listen(app.get("port"),()=> {
         console.log("listening on port 8000")
